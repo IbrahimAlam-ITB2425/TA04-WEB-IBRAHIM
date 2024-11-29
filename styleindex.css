@@ -1,0 +1,259 @@
+body {
+    color: white;
+    background-color: #222;
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+  header {
+    background-color: #1a1a1a;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 20px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+  }
+  
+ /* Título con efecto neón */
+.titulo {
+    color: #a9cae2; /* Color base del título */
+    text-align: end; /* Alineación del texto */
+    font-size: 60px; /* Tamaño del texto */
+    font-weight: bold;
+    text-transform: uppercase; /* Para hacerlo en mayúsculas */
+    letter-spacing: 5px; /* Espaciado entre letras */
+    position: relative;
+    display: inline-block;
+    font-family: 'Arial', sans-serif; /* Puedes cambiarlo por otro tipo de fuente */
+    animation: neón 1.5s ease-in-out infinite alternate; /* Animación de neón */
+  }
+  
+  /* Efecto de neón */
+  .titulo::before, .titulo::after {
+    content: attr(data-text); /* Usamos el texto del título como contenido duplicado */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    color: #0ff; /* Color cian para el resplandor */
+    filter: blur(8px); /* Desenfoque para darle el efecto de resplandor */
+    animation: neón 1.5s ease-in-out infinite alternate;
+  }
+  
+  /* Segundo resplandor */
+  .titulo::after {
+    color: #ff00ff; /* Color rosa para el segundo resplandor */
+    filter: blur(15px); /* Desenfoque más intenso */
+    animation-delay: 0.75s; /* Retrasa un poco el segundo resplandor */
+  }
+  
+  /* Animación para crear el parpadeo del efecto neón */
+  @keyframes neón {
+    0% {
+      text-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #0ff, 0 0 40px #0ff;
+    }
+    100% {
+      text-shadow: 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 50px #ff00ff;
+    }
+  }
+  
+
+  
+  header img {
+    width: 50px;
+    height: auto;
+  }
+  
+  
+  header a {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 20px;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+  }
+  
+  
+  header a:hover {
+    text-decoration: underline;
+    color: #4e91c5;
+  }
+  
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  
+  .dropbtn {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 16px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  
+  .dropbtn:hover {
+    background-color: #4e91c5;
+  }
+  
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #333;
+    min-width: 160px;
+    z-index: 1;
+    border-radius: 10px;
+  }
+  
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  
+  .dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: color 0.3s ease;
+  }
+  
+  
+  .dropdown-content a:hover {
+    background-color: #4e91c5;
+    color: white;
+  }
+  
+  
+  main {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+    padding: 20px;
+  }
+  
+  
+  .projects {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  
+  .projects h3 {
+    text-decoration: underline;
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+    color: #4e91c5;
+  }
+  
+  
+  .project-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+  
+  
+  .project-item {
+    background-color: #333;
+    margin: 15px;
+    padding: 25px;
+    border-radius: 10px;
+    width: calc(50% - 40px);
+    text-align: center;
+    box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  
+  .project-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  
+  .project-item a {
+    color: #56b1e0;
+    text-decoration: none;
+    font-size: 20px;
+    display: block;
+    transition: color 0.3s ease, transform 0.3s ease;
+    font-weight: bold;
+  }
+  
+  
+  .project-item a:hover {
+    color: #b12d9f;
+    transform: translateY(-2px);
+  }
+  
+  
+  footer {
+    background-color: #1a1a1a;
+    padding: 20px;
+    text-align: center;
+    color: white;
+  }
+  
+  
+  footer h6, footer .footer-links h5 {
+    margin: 10px 0;
+    text-align: center;
+  }
+  
+  
+  .footer-links a {
+    color: white;
+    text-decoration: none;
+    margin: 5px 0;
+    display: block;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+    text-align: center;
+  }
+  
+  
+  .footer-links a:hover {
+    text-decoration: underline;
+    color: #4e91c5;
+  }
+  
+  
+  .copyright-text {
+    font-size: 14px;
+    margin-top: 20px;
+    color: white;
+    font-style: italic;
+    opacity: 0.8;
+    text-align: center;
+  }
+  

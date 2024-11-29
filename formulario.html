@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>📜 Formulario de Feedback</title>
+  <link rel="stylesheet" href="styleform.css">
+</head>
+<body>
+  <header>
+   <div>
+       <img src="logo.png" alt="logo">
+    </div>
+      <a href="index.html" class="volver-btn">← Tornar a la Pàgina Principal</a>
+  </header>
+
+
+  <div class="feedback-form">
+      <h2>Formulario de Evaluación</h2>
+      <p>Por favor, tómate un momento para proporcionarnos tu feedback sobre este proyecto.</p>
+    
+      <form action="enviar_feedback.php" method="POST">
+       <label for="calificacion">Selecciona una calificación:</label>
+       <select id="calificacion" name="calificacion">
+         <option value="" disabled selected>¿Cómo calificarías la calidad en general del proyecto?</option>
+         <option value="1">1 - Muy Malo</option>
+         <option value="2">2 - Malo</option>
+         <option value="3">3 - Regular</option>
+         <option value="4">4 - Bueno</option>
+         <option value="5">5 - Excelente</option>
+       </select>
+
+
+          <label for="aspectos_destacados">¿Qué aspectos del proyecto consideras que son los más destacados?</label>
+          <textarea id="aspectos_destacados" name="aspectos_destacados" rows="4" placeholder="Escribe aquí..." required></textarea>
+
+
+          <label for="mejoras">¿En qué áreas crees que se podrían mejorar?</label>
+          <textarea id="mejoras" name="mejoras" rows="4" placeholder="Escribe aquí..." required></textarea>
+
+
+          <label for="sugerencias">¿Tienes alguna otra sugerencia?</label>
+          <textarea id="sugerencias" name="sugerencias" rows="4" placeholder="Escribe aquí..."></textarea>
+
+
+          <button type="submit">Envía tu Feedback</button>
+      </form>
+  </div>
+</body>
+</html>
+

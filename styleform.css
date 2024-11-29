@@ -1,0 +1,154 @@
+body {
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%) -50px 0;       
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #222;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #e0e0e0;
+  }
+  
+  
+  .feedback-form {
+    background-color: #1f1f1f;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    max-width: 600px;
+    width: 100%;
+    border: 1px solid #333;
+    box-sizing: border-box;
+  }
+  
+  
+  h2 {
+    text-align: center;
+    color: #4e91c5;
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+  
+  
+  p {
+    text-align: center;
+    color: #bbb;
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+  
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  
+  label {
+    font-size: 1.1rem;
+    color: #e0e0e0;
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+  
+  
+  select, textarea {
+    font-size: 1rem;
+    padding: 12px;
+    margin-bottom: 20px;
+    background-color: #333;
+    border: 1px solid #4e91c5;
+    transition: border-color 0.3s;
+    color: #e0e0e0;
+    border-radius: 6px;
+    width: 100%;
+  }
+  
+  
+  select:focus, textarea:focus {
+    border-color: #4e91c5;
+    outline: none;
+  }
+  
+  
+  textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+  
+  
+  button {
+    padding: 15px;
+    background-color: #4e91c5;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+    width: 100%;
+  }
+  
+  
+  button:hover {
+    background-color: #357a94;
+    transform: translateY(-2px);
+  }
+  
+  
+  button:active {
+    transform: translateY(1px);
+  }
+  
+  
+  @media (max-width: 768px) {
+    .feedback-form {
+        padding: 20px;
+        max-width: 90%;
+    }
+  
+  
+    h2 {
+        font-size: 1.8rem;
+    }
+  
+  
+    p {
+        font-size: 0.9rem;
+    }
+  }
+  
+  
+  .volver-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333c3f;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+  }
+  
+  
+  .volver-btn:hover {
+    background-color: #286a82;
+  }
+  
+  
+  header img {
+    width: 50px;
+    height: auto;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+  }
+  
